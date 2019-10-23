@@ -39,11 +39,38 @@ Divide the number n by up to n-1 and if remainder not equal zero, then it is a p
 //		assertEquals(j>0, i);
 //	}
 	@Test 
-	public void getPrimeFactors_GivenNumber_ShouldReturnPrimeFactors() {
+	public void getPrimeFactors_Given10_ShouldReturn2and5() {
 		PrimeFactor p=new PrimeFactor();
-		List<Integer> list=p.getPrimeFactors(10);
-		List< Integer> list1= Arrays.asList(2,5);
+		List<Integer> list=p.getPrimeFactors(12);
+		List< Integer> list1= Arrays.asList(2,2,3);
 		assertEquals(list1, list);
+		
+		
+	}
+	@Test 
+	public void getPrimeFactors_Given10_ShouldReturn5and2() {
+		PrimeFactor p=new PrimeFactor();
+		List<Integer> list=p.getPrimeFactors(12);
+		List< Integer> list1= Arrays.asList(3,2,2);
+		assertEquals(list1, list);
+		
+		
+	}
+	@Test 
+	public void getPrimeFactors_Given10_ShouldReturn2and5q() {
+		PrimeFactor p=new PrimeFactor();
+		boolean result=p.getPrimeFactors1(12);
+		List< Integer> list1= Arrays.asList(2,2,3);
+		assertEquals(true, result);
+		
+		
+	}
+	@Test 
+	public void getPrimeFactors_Given10_ShouldReturn5and2q() {
+		PrimeFactor p=new PrimeFactor();
+		boolean result=p.getPrimeFactors1(12);
+		List< Integer> list1= Arrays.asList(3,2,2);
+		assertEquals(true,result);
 		
 		
 	}
